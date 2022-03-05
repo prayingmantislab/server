@@ -1,0 +1,30 @@
+// get all courses
+
+query {
+  allCourses
+  {
+    id,
+    description,
+    title,
+    topic
+  }
+}
+
+//get one course
+
+
+query ($courseID:Int)
+{
+ oneCourse(id:$courseID)
+  {
+    id,
+    title,
+    topic
+  }
+}
+
+//query variables
+
+{
+  "courseID": 2
+}
